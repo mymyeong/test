@@ -21,26 +21,6 @@ public class Sort2 {
 
                     return 1;
 
-//                    int a1 = v1
-
-//                    int max = Math.max(v1, v2);
-//
-//                    int a3 = getNumber(v1, (int) (Math.log10(max) + 1));
-//                    int a4 = getNumber(v2, (int) (Math.log10(max) + 1));
-//
-//                    if (a3 == a4) {
-//                        if(v1 > v2 ) {
-//                            return 1;
-//                        } else if(v1 == v2 ) {
-//                            return 0;
-//                        } else {
-//                            return -1;
-//                        }
-//                    } else if (a3 > a4) {
-//                        return -1;
-//                    } else {
-//                        return 1;
-//                    }
                 })//
                 .map(v -> String.valueOf(v))//
                 .collect(Collectors.joining()));
@@ -57,27 +37,12 @@ public class Sort2 {
         return str;
     }
 
-    public static int getNumber(Integer i, int length) {
-//        int l = i.toString().length();
-        int l = (int) (Math.log10(i) + 1);
-
-        return (int) (i * Math.pow(10, length - l));
-    }
-
     public static void main(String[] args) {
-//        System.out.println(getLeft(123));
-//        System.out.println(getLeft(12, 3));
-
-//        System.out.println(getNumber(1, 3));
-//        System.out.println(getNumber(12, 3));
-//        System.out.println(getNumber(123, 3));
-
-//        System.out.println(numberStirngTrim("00100"));
 
         int[] p1 = new int[]{3, 30, 34, 33, 29};
         System.out.println(new Sort2().solution(p1));
 
-//        int[] p2 = new int[]{0, 0};
-//        System.out.println(new Sort2().solution(p2));
+        int[] p2 = new int[]{0, 0};
+        System.out.println(new Sort2().solution(p2));
     }
 }
